@@ -1,0 +1,15 @@
+<h1>Welcome to our catalogule!</h1>
+<br>
+<hr>
+<br>
+<div class="container">
+    <div class = "loc" *ngFor="let location of locations;let i=index">
+        <img id="imageId" src="{{location.imageSrc}}" alt="{{location.imageAlt}}"/>
+        <h5>{{i+1}}. {{location.name}}</h5> 
+        <p>{{location.description}} </p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© App developed by VB</p>
+</div>
