@@ -5,10 +5,35 @@
 .loc{
     margin: 0.5%;
     padding: 0.5%;
-    border: 1px solid rgb(75, 122, 75);
-    box-shadow: 5px 2px 7px rgb(28, 80, 30);
+    border: 1px solid #312244;
+    box-shadow: 5px 2px 7px #272640;
+    background-color: #e2eafc;
 }
 #imageId{
-    height: 350px;
-    width: 400px;
+    height: 250px;
+    width: 300px;
+}
+#visited{
+    margin-left: 70%; 
+    margin-right: 2%;
+    font-style: italic; 
+    font-weight: 600;
+}
+#visited:hover{
+    color: #006466 ;
+}
+h1{
+   font-family: cursive;
+   text-align: center;
+   font-weight: 500;
+   text-shadow: 2px 2px black;
+   color: #312244;
+}
+
+h5{
+    
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0.1px 1px #3E1F47;
+    color: #312244;
 }

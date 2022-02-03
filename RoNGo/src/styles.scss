@@ -5,9 +5,25 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: rgb(59, 103, 145);
+	background-color: #1B3A4B;
 	color: rgb(219, 208, 208);
 	text-align: center;
 	font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar-brand{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: #006466;
+}
+.navbar{
+	background-color: #312244;
+}
+#logout{
+	background-color: #adb5bd;
+	color: ivory;
+	border-radius: 15px 40px;
+	margin-right: 5px;
+}
+#logout:hover{
+	color: #495057;
 }

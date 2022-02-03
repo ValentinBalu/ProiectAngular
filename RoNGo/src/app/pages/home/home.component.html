@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="['/home']" style="margin-left: 5px; font-size: 30px;">RoNGo</a>
+    <img src="assets\images\van.png" alt="van" style="height: 20px; width: 40px; margin-right: 15px;"/>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/home']">Home</a>
+        <a class="nav-item nav-link" [routerLink]="['/']">Profile</a>
+        <a class="nav-item nav-link" [routerLink]="['/catalogue']">Catalogue</a>
+        <a class="nav-item nav-link" [routerLink]="['/contact']">Contact</a>
+      </div>
+    </div>
+    <a class="nav-item nav-link " id="logout" [routerLink]="['/login']">Logout</a>
+</nav>
+<body background="assets/images/home-back.jpg">
+  <br>
+
+  <h1>Welcome to RoNGo!</h1>
+  <br>
+  <div class="container">
+    <br>
+    <h3>Hello and welcome to our page, dear traveller!</h3>
+    <br>
+    <p class="txt">It is said that only by travelling to new places and by acknowledging impressive cultures you can broaden your horizont.</p>
+    <p class="txt">We know how much you love to travel and to make it very simple for you to organize your trip, we launched <span style="font-weight: bold;">RoNGo</span>.</p>
+    <p class="txt">This is an app which will help unraveling Romania's beauty and you can use it to mark as 'visited' the most wonderful attractions of Romania.</p>
+    <span style="font-weight: 700;">Does it sound useful? Take a look at our catalogue: </span>
+    <button type="button" class="btn btn-outline-secondary" (click)="goToCatalogue()">Catalogue</button>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+</body>
+
+<div class="footer">
+    <p>© App developed by VB</p>
+</div>
