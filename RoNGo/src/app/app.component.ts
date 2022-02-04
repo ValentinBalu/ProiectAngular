@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RegisterService } from './services/register.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RonGo';
+  constructor(public _registerService: RegisterService){}
 }

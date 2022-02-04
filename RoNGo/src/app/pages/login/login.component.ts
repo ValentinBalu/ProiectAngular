@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginDTO } from 'src/app/interfaces/login-dto';
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
   public error:boolean | string = false;
 
-  constructor() { }
+  constructor(private _service : RegisterService, private _router : Router) { }
 
   ngOnInit(): void {
   }
@@ -26,8 +28,12 @@ export class LoginComponent implements OnInit {
   doLogin(){
     this.error = false;
     if(this.validateEmail(this.user.email)){
-      //TODO : trimitem requestul de login
-    }else{
+      //trimitem requestul de login
+      this._service.loginUserFromRemote(this.user).subscribe((response:any)=>{
+        console.log(response);
+        localStorage.setItem('token',  JSON.stringify(response));
+        this._router.navigate(['/profile'])
+    })}else{
       this.error = "The email you inserted is invalid!";
     }
   }

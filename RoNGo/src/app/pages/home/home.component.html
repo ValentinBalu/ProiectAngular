@@ -7,12 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" [routerLink]="['/home']">Home</a>
-        <a class="nav-item nav-link" [routerLink]="['/']">Profile</a>
+        <a class="nav-item nav-link" [routerLink]="['/profile']">Profile</a>
         <a class="nav-item nav-link" [routerLink]="['/catalogue']">Catalogue</a>
         <a class="nav-item nav-link" [routerLink]="['/contact']">Contact</a>
       </div>
     </div>
-    <a class="nav-item nav-link " id="logout" [routerLink]="['/login']">Logout</a>
+    <a class="nav-item nav-link " id="logout" (click)="userLogout()">Logout</a>
 </nav>
 <body background="assets/images/home-back.jpg">
   <br>

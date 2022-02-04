@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="['/home']" style="margin-left: 5px; font-size: 30px;">RoNGo</a>
+    <img src="assets\images\van.png" alt="van" style="height: 20px; width: 40px; margin-right: 15px;"/>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/home']">Home</a>
+        <a class="nav-item nav-link" *ngIf="userIsLogged" [routerLink]="['/profile']">Profile</a>
+        <a class="nav-item nav-link" [routerLink]="['/catalogue']">Catalogue</a>
+        <a class="nav-item nav-link" [routerLink]="['/contact']">Contact</a>
+      </div>
+    </div>
+    <a class="nav-item nav-link " id="logout" *ngIf="userIsLogged" (click)="userLogout()">Logout</a>
+  </nav>
+  
+  <body background="assets/images/profile-back.jpg">
+    <br>
+  
+    <h1>Welcome to your profile, {{user.firstName}}!</h1>
+    <br>
+    <div class="container">
+      <br>
+      <h3>Your personal information:</h3>
+      <br>
+      <div class="info">
+        <p >First name : {{user.firstName}} </p>
+        <p >Last name : {{user.lastName}} </p>
+        <p > Age : {{user.age}} </p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+        </svg> {{user.email}}<br>
+    </div> 
+    <br>
+    <span style="font-weight: 700;">We hope you will enjoy this experience!</span>
+    <br>
+    <br>
+    </div>
+    <br><br><br><br>
+  </body>
+  <div class="footer">
+      <p>© App developed by VB</p>
+  </div>

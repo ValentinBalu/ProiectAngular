@@ -9,6 +9,8 @@ import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { ContactComponent } from './pages/contact/contact.component';
     RegisterComponent,
     CatalogueComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

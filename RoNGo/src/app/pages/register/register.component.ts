@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +14,7 @@ export class RegisterComponent implements OnInit {
 
   // public passwordAdvice = false;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private _service: RegisterService,private _router: Router, private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
     this.myForm = this.formBuilder.group({
@@ -30,6 +32,11 @@ export class RegisterComponent implements OnInit {
 
   doRegister(){
     console.log(this.myForm);
+    this._service.registerUserFromRemote(this.myForm.value).subscribe((response:any)=>{
+      console.log(response);
+      this._router.navigate(['/login']);
+    }
+    )
   }
 
 //   if(!this.validatePassword(this.user.password)){
